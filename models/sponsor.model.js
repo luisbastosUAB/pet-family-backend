@@ -12,7 +12,12 @@ const sponsorSchema = new Schema({
     creation_date: {
         type: Date,
         default: Date.now
-    }
+    },
+    NIF: String,
+    cidade: String,
+    codpostal: String,
+    morada: String,
+    telefone: String
 });
 
 module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.spsr, sponsorSchema);

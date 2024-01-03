@@ -28,7 +28,12 @@ exports.create = (req, res) => {
         name: req.body.name,
         animal: req.body.animal,
         valor: req.body.valor,
-        creation_date: req.body.creation_date
+        creation_date: req.body.creation_date,
+        NIF: req.body.NIF,
+        cidade: req.body.cidade,
+        codpostal: req.body.codpostal,
+        morada: req.body.morada,
+        telefone: req.body.telefone
     }).save((error, sponsor) => {
         if (error) throw error;
 

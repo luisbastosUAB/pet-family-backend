@@ -14,7 +14,12 @@ router.route('/')
     .post(AuthController.checkAuth, [body('name').isString(),
         body('animal').isString(),
         body('valor').isInt(),
-        body('creation_date').isISO8601()
+        body('creation_date').isISO8601(),
+        body('NIF').isString(),
+        body('cidade').isString(),
+        body('codpostal').isString(),
+        body('morada').isString(),
+        body('telefone').isString(),
     ], SponsorController.create);
 
 
