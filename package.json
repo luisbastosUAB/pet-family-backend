@@ -1,7 +1,7 @@
 {
-  "name": "api_fca_book2",
+  "name": "api_pet_family",
   "version": "1.0.0",
-  "description": "API advanced book",
+  "description": "API for Pet Family",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/filipeportela/fca_webbook2.git"
+    "url": "git+https://github.com/luisbastosUAB/pet-family-backend.git"
   },
   "keywords": [
     "web",
@@ -21,9 +21,9 @@
     "rest"
   ],
   "bugs": {
-    "url": "https://github.com/filipeportela/fca_webbook2/issues"
+    "url": "https://github.com/luisbastosUAB/pet-family-backend/issues"
   },
-  "homepage": "https://github.com/filipeportela/fca_webbook2#readme",
+  "homepage": "https://github.com/luisbastosUAB/pet-family-backend#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
