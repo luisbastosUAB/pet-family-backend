@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const CONFIG = require('../config/config');
 
-const animalSchema = new Schema({
+const dogSchema = new Schema({
     name: String,
-    group: String,
+    raca: String,
     description: String,
+    sku: String,
     links: [{
         types: String,
         url: String
@@ -32,4 +33,4 @@ const animalSchema = new Schema({
     }
 });
 
-module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.animal, animalSchema);
+module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.dogs, dogSchema);

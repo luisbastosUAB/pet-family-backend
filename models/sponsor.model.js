@@ -4,7 +4,7 @@ const CONFIG = require('../config/config');
 
 const sponsorSchema = new Schema({
     name: String,
-    animal: String,
+    dog: String,
     valor: {
         type: Number,
         default: 0

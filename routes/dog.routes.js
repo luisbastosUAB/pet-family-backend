@@ -1,6 +1,6 @@
 const express = require('express');
 let router = express.Router();
-const AnimalController = require('../controllers/animal.controller');
+const DogController = require('../controllers/dog.controller');
 const {
     body,
     param,
@@ -9,8 +9,9 @@ const {
 const CONFIG = require("../config/config");
 const AuthController = require("../controllers/auth.controller");
 
+//.get(AuthController.checkAuth, DogController.get)
 router.route('/')
-    .get(AuthController.checkAuth, AnimalController.get)
+    .get(AuthController.checkAuth, DogController.get)
     .post(AuthController.checkAuth, [body('name').isString(),
         body('group').isString(),
         body('description').isString(),
@@ -18,17 +19,17 @@ router.route('/')
         body('links.*.types').isAlpha(),
         body('links.*.url').isURL(),
         sanitizeBody('description').whitelist(CONFIG.sanitize.alphabet + CONFIG.sanitize.numerical)
-    ], AnimalController.create);
+    ], DogController.create);
 
 router.route("/deactivate/:id")
-    .put(AuthController.checkAuth, [param("id").isMongoId()], AnimalController.deactivate);
+    .put(AuthController.checkAuth, [param("id").isMongoId()], DogController.deactivate);
 
 router.route("/activate/:id")
-    .put(AuthController.checkAuth, [param("id").isMongoId()], AnimalController.activate);
+    .put(AuthController.checkAuth, [param("id").isMongoId()], DogController.activate);
 
 router.route('/:id')
-    .get(AuthController.checkAuth, [param("id").isMongoId()], AnimalController.getOne)
-    .put(AuthController.checkAuth, [param("id").isMongoId()], AnimalController.update)
-    .delete(AuthController.checkAuth, [param("id").isMongoId()], AnimalController.delete);
+    .get(AuthController.checkAuth, [param("id").isMongoId()], DogController.getOne)
+    .put(AuthController.checkAuth, [param("id").isMongoId()], DogController.update)
+    .delete(AuthController.checkAuth, [param("id").isMongoId()], DogController.delete);
 
 module.exports = router;

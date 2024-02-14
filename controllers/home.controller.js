@@ -6,15 +6,15 @@ exports.get = (req, res) => {
     let home = fs.readFileSync(__dirname + "/../views/home.hbs", "utf8");
 
     let compiled_page = Handlebars.compile(home)({
-        title: "Animalec",
+        title: "PetFamily",
         style: {
             background_color: "#2b589f",
             text_color: "#FFFFFF"
         },
         content: {
             logo: "../assets/images/logo.png",
-            title: "ANIMALEC API",
-            text: 'API do Livro da FCA "Desenvolvimento Avançado para a Web"'
+            title: "PetFamily API",
+            text: 'API do trabalho final'
         }
     });
 

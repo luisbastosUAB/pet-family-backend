@@ -12,7 +12,7 @@ const AuthController = require("../controllers/auth.controller");
 router.route('/')
     .get(AuthController.checkAuth, SponsorController.get)
     .post(AuthController.checkAuth, [body('name').isString(),
-        body('animal').isString(),
+        body('dog').isString(),
         body('valor').isInt(),
         body('creation_date').isISO8601(),
         body('NIF').isString(),

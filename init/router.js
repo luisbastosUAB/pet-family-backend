@@ -1,7 +1,7 @@
 module.exports = (app) => {
 
     app.use('/', require("../routes/home.routes"));
-    app.use('/animals', require('../routes/animal.routes'));
+    app.use('/dogs', require('../routes/dog.routes'));
     app.use('/auth', require('../routes/auth.routes'));
     app.use('/questions', require('../routes/question.routes'));
     app.use('/quizzes', require('../routes/quiz.routes'));

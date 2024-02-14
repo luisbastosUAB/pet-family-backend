@@ -26,7 +26,7 @@ exports.create = (req, res) => {
 
     new Sponsor({
         name: req.body.name,
-        animal: req.body.animal,
+        dog: req.body.dog,
         valor: req.body.valor,
         creation_date: req.body.creation_date,
         NIF: req.body.NIF,

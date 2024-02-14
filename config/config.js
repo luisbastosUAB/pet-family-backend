@@ -1,8 +1,9 @@
+// uri: 'mongodb://localhost:27017/test',
 module.exports = {
     mongodb: {
         uri: 'mongodb+srv://2302593:dj9qWXPknZJD2yta@cluster0.q7rnmdw.mongodb.net/?retryWrites=true&w=majority/petfamily',
         collections: {
-            animal: 'animals',
+            dogs: 'dogs',
             question: 'questions',
             quiz: 'quizzes',
             user: 'users',

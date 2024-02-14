@@ -1,23 +1,23 @@
 module.exports = {
     success: {
         s0: {
-            code: "AnimalCreated",
+            code: "DogCreated",
             http: 201,
             type: "success"
         },
         s1: {
             http: 200,
-            code: "AnimalUpdated",
+            code: "DogUpdated",
             type: "success"
         },
         s2: {
             http: 200,
-            code: "AnimalFound",
+            code: "DogFound",
             type: "success"
         },
         s3: {
             http: 200,
-            code: "AnimalDeleted",
+            code: "DogDeleted",
             type: "success"
         },
         s4: {
@@ -27,7 +27,7 @@ module.exports = {
         },
         s5: {
             http: 204,
-            code: "NoAnimals",
+            code: "NoDogs",
             type: "success"
         },
         s6: {
@@ -39,7 +39,7 @@ module.exports = {
     error: {
         e0: {
             http: 404,
-            code: "AnimalNotFound",
+            code: "DogNotFound",
             type: "error"
         }
     }
